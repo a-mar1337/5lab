@@ -1,42 +1,40 @@
+"""Основной модуль приложения.
+
+Предоставляет консольный интерфейс для запуска различных задач.
+"""
+
 import argparse
-from my_project.data_loader import load_data, save_data
-from my_project.calculator import Calculator, calculate_average
+from my_package import tasks
+from my_package import finance
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Обработка данных и вычисления")
+    """Основная функция приложения."""
+    parser = argparse.ArgumentParser(description="Запуск различных задач")
     
-    subparsers = parser.add_subparsers(dest='command')
-    
-    load_parser = subparsers.add_parser('load')
-    load_parser.add_argument('filename')
-    
-    calc_parser = subparsers.add_parser('calc')
-    calc_parser.add_argument('--numbers', nargs='+', type=float)
+    parser.add_argument('task', type=int, choices=range(1, 11), 
+                       help='Номер задачи от 1 до 10')
     
     args = parser.parse_args()
     
-    if args.command == 'load':
-        try:
-            data = load_data(args.filename)
-            print(f"Загружено {len(data)} записей")
-        except Exception as e:
-            print(f"Ошибка: {e}")
+    task_functions = {
+        1: tasks.task1,
+        2: tasks.task2,
+        3: tasks.task3,
+        4: tasks.task4,
+        5: tasks.task5,
+        6: finance.task6,
+        7: tasks.task7,
+        8: tasks.task8,
+        9: tasks.task9,
+        10: tasks.task10
+    }
     
-    elif args.command == 'calc':
-        if args.numbers:
-            try:
-                avg = calculate_average(args.numbers)
-                print(f"Среднее: {avg}")
-            except ValueError as e:
-                print(f"Ошибка: {e}")
-        else:
-            calc = Calculator()
-            result = calc.add(10, 5)
-            print(f"10 + 5 = {result}")
-    
+    if args.task in task_functions:
+        print(f"\n=== Задача {args.task} ===")
+        task_functions[args.task]()
     else:
-        parser.print_help()
+        print("Задача не найдена")
 
 
 if __name__ == "__main__":

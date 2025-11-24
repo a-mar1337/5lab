@@ -5,4 +5,4 @@
    :maxdepth: 4
 
    main
-   my_project
+   my_package

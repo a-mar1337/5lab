@@ -1,0 +1,353 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>my_package.tasks &mdash; Проект с задачами  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            Проект с задачами
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Содержание:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../modules.html">5lab</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api-reference.html">Справочник API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../examples.html">Примеры использования</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Проект с задачами</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Module code</a></li>
+      <li class="breadcrumb-item active">my_package.tasks</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <h1>Source code for my_package.tasks</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;Модуль с различными задачами для работы с данными.&quot;&quot;&quot;</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">datetime</span><span class="w"> </span><span class="kn">import</span> <span class="n">datetime</span><span class="p">,</span> <span class="n">date</span>
+
+
+<div class="viewcode-block" id="task1">
+<a class="viewcode-back" href="../../my_package.html#my_package.tasks.task1">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">task1</span><span class="p">():</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Генерирует список квадратов чисел от 1 до 10.</span>
+<span class="sd">    </span>
+<span class="sd">    Returns:</span>
+<span class="sd">        list: Список квадратов чисел</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">squares</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">11</span><span class="p">)]</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Квадраты чисел от 1 до 10:&quot;</span><span class="p">,</span> <span class="n">squares</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">squares</span></div>
+
+
+
+<div class="viewcode-block" id="task2">
+<a class="viewcode-back" href="../../my_package.html#my_package.tasks.task2">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">task2</span><span class="p">():</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Генерирует список четных чисел от 1 до 19.</span>
+<span class="sd">    </span>
+<span class="sd">    Returns:</span>
+<span class="sd">        list: Список четных чисел</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">even_numbers</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span> <span class="k">if</span> <span class="n">x</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">]</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Четные числа от 1 до 19:&quot;</span><span class="p">,</span> <span class="n">even_numbers</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">even_numbers</span></div>
+
+
+
+<div class="viewcode-block" id="task3">
+<a class="viewcode-back" href="../../my_package.html#my_package.tasks.task3">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">task3</span><span class="p">():</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Фильтрует слова длиннее 3 символов и переводит в верхний регистр.</span>
+<span class="sd">    </span>
+<span class="sd">    Returns:</span>
+<span class="sd">        list: Отфильтрованный список слов</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">words</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;python&quot;</span><span class="p">,</span> <span class="s2">&quot;Java&quot;</span><span class="p">,</span> <span class="s2">&quot;c++&quot;</span><span class="p">,</span> <span class="s2">&quot;Rust&quot;</span><span class="p">,</span> <span class="s2">&quot;go&quot;</span><span class="p">]</span>
+    <span class="n">filtered_words</span> <span class="o">=</span> <span class="p">[</span><span class="n">word</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span> <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">words</span> <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">word</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">3</span><span class="p">]</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Исходный список:&quot;</span><span class="p">,</span> <span class="n">words</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Слова в верхнем регистре длиннее 3 символов:&quot;</span><span class="p">,</span> <span class="n">filtered_words</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">filtered_words</span></div>
+
+
+
+<div class="viewcode-block" id="Countdown">
+<a class="viewcode-back" href="../../my_package.html#my_package.tasks.Countdown">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">Countdown</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Класс для обратного отсчета.&quot;&quot;&quot;</span>
+    
+<div class="viewcode-block" id="Countdown.__init__">
+<a class="viewcode-back" href="../../my_package.html#my_package.tasks.Countdown.__init__">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Инициализирует отсчет с числа n.</span>
+<span class="sd">        </span>
+<span class="sd">        Args:</span>
+<span class="sd">            n (int): Начальное число отсчета</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">n</span> <span class="o">=</span> <span class="n">n</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">current</span> <span class="o">=</span> <span class="n">n</span></div>
+
+    
+<div class="viewcode-block" id="Countdown.__iter__">
+<a class="viewcode-back" href="../../my_package.html#my_package.tasks.Countdown.__iter__">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__iter__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Возвращает итератор.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span></div>
+
+    
+<div class="viewcode-block" id="Countdown.__next__">
+<a class="viewcode-back" href="../../my_package.html#my_package.tasks.Countdown.__next__">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__next__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Возвращает следующее число в отсчете.</span>
+<span class="sd">        </span>
+<span class="sd">        Returns:</span>
+<span class="sd">            int: Следующее число</span>
+<span class="sd">            </span>
+<span class="sd">        Raises:</span>
+<span class="sd">            StopIteration: Когда отсчет завершен</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">current</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">StopIteration</span>
+        <span class="n">value</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">current</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">current</span> <span class="o">-=</span> <span class="mi">1</span>
+        <span class="k">return</span> <span class="n">value</span></div>
+</div>
+
+
+
+<div class="viewcode-block" id="task4">
+<a class="viewcode-back" href="../../my_package.html#my_package.tasks.task4">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">task4</span><span class="p">():</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Демонстрирует обратный отсчет от 6 до 1.&quot;&quot;&quot;</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Обратный отсчет от 5:&quot;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">Countdown</span><span class="p">(</span><span class="mi">6</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot; &quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">()</span></div>
+
+
+
+<div class="viewcode-block" id="fibonacci">
+<a class="viewcode-back" href="../../my_package.html#my_package.tasks.fibonacci">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">fibonacci</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Генерирует последовательность Фибоначчи.</span>
+<span class="sd">    </span>
+<span class="sd">    Args:</span>
+<span class="sd">        n (int): Количество чисел для генерации</span>
+<span class="sd">        </span>
+<span class="sd">    Yields:</span>
+<span class="sd">        int: Следующее число Фибоначчи</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span>
+    <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">while</span> <span class="n">count</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">:</span>
+        <span class="k">yield</span> <span class="n">a</span>
+        <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="n">b</span><span class="p">,</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+        <span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span></div>
+
+
+
+<div class="viewcode-block" id="task5">
+<a class="viewcode-back" href="../../my_package.html#my_package.tasks.task5">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">task5</span><span class="p">():</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Выводит первые 5 чисел последовательности Фибоначчи.&quot;&quot;&quot;</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Первые 5 чисел Фибоначчи:&quot;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">num</span> <span class="ow">in</span> <span class="n">fibonacci</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">num</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot; &quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">()</span></div>
+
+
+
+<div class="viewcode-block" id="task7">
+<a class="viewcode-back" href="../../my_package.html#my_package.tasks.task7">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">task7</span><span class="p">():</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Демонстрирует операции с дробями.&quot;&quot;&quot;</span>
+    <span class="kn">from</span><span class="w"> </span><span class="nn">fractions</span><span class="w"> </span><span class="kn">import</span> <span class="n">Fraction</span>
+    
+    <span class="n">frac1</span> <span class="o">=</span> <span class="n">Fraction</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+    <span class="n">frac2</span> <span class="o">=</span> <span class="n">Fraction</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
+    
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Дробь 1: </span><span class="si">{</span><span class="n">frac1</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Дробь 2: </span><span class="si">{</span><span class="n">frac2</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    
+    <span class="n">addition</span> <span class="o">=</span> <span class="n">frac1</span> <span class="o">+</span> <span class="n">frac2</span>
+    <span class="n">subtraction</span> <span class="o">=</span> <span class="n">frac1</span> <span class="o">-</span> <span class="n">frac2</span>
+    <span class="n">multiplication</span> <span class="o">=</span> <span class="n">frac1</span> <span class="o">*</span> <span class="n">frac2</span>
+    <span class="n">division</span> <span class="o">=</span> <span class="n">frac1</span> <span class="o">/</span> <span class="n">frac2</span>
+    
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Результаты операций:&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Сложение: </span><span class="si">{</span><span class="n">frac1</span><span class="si">}</span><span class="s2"> + </span><span class="si">{</span><span class="n">frac2</span><span class="si">}</span><span class="s2"> = </span><span class="si">{</span><span class="n">addition</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Вычитание: </span><span class="si">{</span><span class="n">frac1</span><span class="si">}</span><span class="s2"> - </span><span class="si">{</span><span class="n">frac2</span><span class="si">}</span><span class="s2"> = </span><span class="si">{</span><span class="n">subtraction</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Умножение: </span><span class="si">{</span><span class="n">frac1</span><span class="si">}</span><span class="s2"> * </span><span class="si">{</span><span class="n">frac2</span><span class="si">}</span><span class="s2"> = </span><span class="si">{</span><span class="n">multiplication</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Деление: </span><span class="si">{</span><span class="n">frac1</span><span class="si">}</span><span class="s2"> / </span><span class="si">{</span><span class="n">frac2</span><span class="si">}</span><span class="s2"> = </span><span class="si">{</span><span class="n">division</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="task8">
+<a class="viewcode-back" href="../../my_package.html#my_package.tasks.task8">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">task8</span><span class="p">():</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Выводит текущую дату и время в различных форматах.</span>
+<span class="sd">    </span>
+<span class="sd">    Returns:</span>
+<span class="sd">        datetime: Текущая дата и время</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">t</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span>
+    
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Текущая дата и время:&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Полная дата и время: </span><span class="si">{</span><span class="n">t</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Только дата: </span><span class="si">{</span><span class="n">t</span><span class="o">.</span><span class="n">date</span><span class="p">()</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Только время: </span><span class="si">{</span><span class="n">t</span><span class="o">.</span><span class="n">time</span><span class="p">()</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Альтернативные форматы:&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Дата (ISO формат): </span><span class="si">{</span><span class="n">t</span><span class="o">.</span><span class="n">date</span><span class="p">()</span><span class="o">.</span><span class="n">isoformat</span><span class="p">()</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Время (ISO формат): </span><span class="si">{</span><span class="n">t</span><span class="o">.</span><span class="n">time</span><span class="p">()</span><span class="o">.</span><span class="n">isoformat</span><span class="p">(</span><span class="s1">&#39;seconds&#39;</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    
+    <span class="k">return</span> <span class="n">t</span></div>
+
+
+
+<div class="viewcode-block" id="task9">
+<a class="viewcode-back" href="../../my_package.html#my_package.tasks.task9">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">task9</span><span class="p">():</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Рассчитывает дни с рождения и до следующего дня рождения.</span>
+<span class="sd">    </span>
+<span class="sd">    Returns:</span>
+<span class="sd">        tuple: (дней прошло, дней до следующего дня рождения)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">birth_date</span> <span class="o">=</span> <span class="n">date</span><span class="p">(</span><span class="mi">2005</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">17</span><span class="p">)</span> 
+    
+    <span class="n">today</span> <span class="o">=</span> <span class="n">date</span><span class="o">.</span><span class="n">today</span><span class="p">()</span>
+    
+    <span class="n">days_passed</span> <span class="o">=</span> <span class="p">(</span><span class="n">today</span> <span class="o">-</span> <span class="n">birth_date</span><span class="p">)</span><span class="o">.</span><span class="n">days</span>
+    
+    <span class="n">next_birthday</span> <span class="o">=</span> <span class="n">date</span><span class="p">(</span><span class="n">today</span><span class="o">.</span><span class="n">year</span><span class="p">,</span> <span class="n">birth_date</span><span class="o">.</span><span class="n">month</span><span class="p">,</span> <span class="n">birth_date</span><span class="o">.</span><span class="n">day</span><span class="p">)</span>
+    
+    <span class="k">if</span> <span class="n">next_birthday</span> <span class="o">&lt;</span> <span class="n">today</span><span class="p">:</span>
+        <span class="n">next_birthday</span> <span class="o">=</span> <span class="n">date</span><span class="p">(</span><span class="n">today</span><span class="o">.</span><span class="n">year</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">birth_date</span><span class="o">.</span><span class="n">month</span><span class="p">,</span> <span class="n">birth_date</span><span class="o">.</span><span class="n">day</span><span class="p">)</span>
+
+    <span class="n">days_to_birthday</span> <span class="o">=</span> <span class="p">(</span><span class="n">next_birthday</span> <span class="o">-</span> <span class="n">today</span><span class="p">)</span><span class="o">.</span><span class="n">days</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Дата рождения: </span><span class="si">{</span><span class="n">birth_date</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Сегодняшняя дата: </span><span class="si">{</span><span class="n">today</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Дней прошло с рождения: </span><span class="si">{</span><span class="n">days_passed</span><span class="si">}</span><span class="s2"> дней&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Следующий день рождения: </span><span class="si">{</span><span class="n">next_birthday</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Дней до следующего дня рождения: </span><span class="si">{</span><span class="n">days_to_birthday</span><span class="si">}</span><span class="s2"> дней&quot;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">days_passed</span><span class="p">,</span> <span class="n">days_to_birthday</span></div>
+
+
+
+<div class="viewcode-block" id="format_datetime">
+<a class="viewcode-back" href="../../my_package.html#my_package.tasks.format_datetime">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">format_datetime</span><span class="p">(</span><span class="n">dt</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Форматирует дату и время в читаемый вид.</span>
+<span class="sd">    </span>
+<span class="sd">    Args:</span>
+<span class="sd">        dt (datetime): Дата и время для форматирования</span>
+<span class="sd">        </span>
+<span class="sd">    Returns:</span>
+<span class="sd">        str: Отформатированная строка</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">months</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="mi">1</span><span class="p">:</span> <span class="s2">&quot;января&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="p">:</span> <span class="s2">&quot;февраля&quot;</span><span class="p">,</span> <span class="mi">3</span><span class="p">:</span> <span class="s2">&quot;марта&quot;</span><span class="p">,</span> <span class="mi">4</span><span class="p">:</span> <span class="s2">&quot;апреля&quot;</span><span class="p">,</span>
+        <span class="mi">5</span><span class="p">:</span> <span class="s2">&quot;мая&quot;</span><span class="p">,</span> <span class="mi">6</span><span class="p">:</span> <span class="s2">&quot;июня&quot;</span><span class="p">,</span> <span class="mi">7</span><span class="p">:</span> <span class="s2">&quot;июля&quot;</span><span class="p">,</span> <span class="mi">8</span><span class="p">:</span> <span class="s2">&quot;августа&quot;</span><span class="p">,</span>
+        <span class="mi">9</span><span class="p">:</span> <span class="s2">&quot;сентября&quot;</span><span class="p">,</span> <span class="mi">10</span><span class="p">:</span> <span class="s2">&quot;октября&quot;</span><span class="p">,</span> <span class="mi">11</span><span class="p">:</span> <span class="s2">&quot;ноября&quot;</span><span class="p">,</span> <span class="mi">12</span><span class="p">:</span> <span class="s2">&quot;декабря&quot;</span>
+    <span class="p">}</span>
+    
+    <span class="n">time_str</span> <span class="o">=</span> <span class="n">dt</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s2">&quot;%H:%M&quot;</span><span class="p">)</span>
+    
+    <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;Сегодня </span><span class="si">{</span><span class="n">dt</span><span class="o">.</span><span class="n">day</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">months</span><span class="p">[</span><span class="n">dt</span><span class="o">.</span><span class="n">month</span><span class="p">]</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">dt</span><span class="o">.</span><span class="n">year</span><span class="si">}</span><span class="s2"> года, время: </span><span class="si">{</span><span class="n">time_str</span><span class="si">}</span><span class="s2">&quot;</span></div>
+
+
+
+<div class="viewcode-block" id="task10">
+<a class="viewcode-back" href="../../my_package.html#my_package.tasks.task10">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">task10</span><span class="p">():</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Выводит текущую дату и время в читаемом формате.</span>
+<span class="sd">    </span>
+<span class="sd">    Returns:</span>
+<span class="sd">        str: Отформатированная строка с датой и временем</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">now</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span>
+    <span class="n">formatted</span> <span class="o">=</span> <span class="n">format_datetime</span><span class="p">(</span><span class="n">now</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Текущая дата и время:&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">formatted</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">formatted</span></div>
+
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Ваше Имя.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
